@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html, body{
+    width: 1920px;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    font-family: "Manrope", sans-serif;
+}
+
+:root{
+    --background-color: #ffffff;
+    --text-color: var(--gray-700);
+    --primary-color: #6366f1;
+    --system-error: #EF4444;
+    --system-success: #22c55e;
+    --system-warning: #ffba08;
+    --system-info: #4c82f7;
+    --white: #fff;
+    --gray-100: #f3f6ff;
+    --gray-200: #eff2fc;
+    --gray-300: #e2e5f1;
+    --gray-400: #d4d7e5;
+    --gray-500: #b4b7c9;
+    --gray-600: #9397ad;
+    --gray-700: #565973;
+    --gray-800: #33354d;
+    --gray-900: #0b0f19;
+    --gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 100%, rgba(139, 92, 246, 1) 100%, rgba(217, 70, 239, 1) 100%);
+
+}
+
+/*[data-theme="dark"]{
+    --background-color:#ffffff;
+    --primary-color: #f0f;
+
+}*/
+
+#header{
+    margin-left: 320px;
+    margin-right: 312px;
+}
+
+.nav-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 76px;
+}
+
+.nav-item{
+    border-radius: 8px;
+    align-content: center;
+}
+
+.box-1{
+    flex: 1;
+}
+
+.button-signin{
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: "Manrope", sans-serif;
+    width: 140px;
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 300;
+    font-size: 14px;
+    align-content: center;
+}
+
+.bi-person-fill{
+    padding-right: 8px;
+    font-size: 18px;
+}
+
+#brand{
+    margin-left: 320px;
+    margin-right: 312px;
+}
+
+.brand-container{
+    display: flex;
+    text-align: center;
+    gap:24px;
+    
+}
+
+.brand{
+    flex: 6;
+    border:1px solid;
+    border-color: var(--gray-600);
+    border-radius: 8px;
+    height: 100px;
+    align-content: center;
+}
