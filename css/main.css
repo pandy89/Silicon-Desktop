@@ -38,7 +38,32 @@ html, body{
 
 }*/
 
+.page{
+    height: 100dvh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 #header{
+    margin-left: 320px;
+    margin-right: 312px;
+}
+
+main{
+
+    margin-left: 320px;
+    margin-right: 312px;
+}
+
+footer{
+    background-color: var(--background-color);
+    color: var(--gray-600);
+    text-align: center;
+    align-content: center;
+    height: 130px; 
+    font-size: 14px;
+    font-weight: 400;
     margin-left: 320px;
     margin-right: 312px;
 }
