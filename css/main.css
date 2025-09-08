@@ -51,150 +51,6 @@ html, body{
     margin-right: 312px;
 }
 
-#hero{
-    background: var(--gradient-background-color);
-    background: var(--gradient-background);
-    overflow: hidden;
-    margin-left: 320px;
-    margin-right: 312px;
-    border: 1px solid #000;
-    display: grid;
-
-}
-
-#container{
-    display: flex;
-}
-
-.hero-container-left{
-    display: grid;
-    padding-top: 48px;
-
-    grid-template-columns: 526px ;
-    grid-template-rows: 146px 58px 52px ;
-    grid-template-areas:    "b1 b1"
-                            "b2 b2"
-                            "b3 b4"
-    ;
-
-    #b1{
-        grid-area: b1;
-        border: 1px solid #000;
-
-    }
-    #b2{
-        grid-area: b2;
-        color: var(--text-color);
-        border: 1px solid #000;
-
-
-    }
-    #b3{
-        grid-area: b3;
-        border: 1px solid #000;
-        width: 180px;
-    }
-        
-    #b4{
-        grid-area: b4;
-        border: 1px solid #000;
-        width: 180px;
-    }
-}
-
-.hero-container-right{
-    display: grid;
-
-}
-
-.box{
-    border: 1px solid #000;
-}
-
-/*
-.hero-container{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(3);
-
-}
-
-
-.title{
-    display: grid;
-    grid-area: title;
-    border: 1px solid #000;
-    grid-row: 1;
-    grid-column: 1;
-}
-.subtitle{
-    display: grid;
-    grid-area: subtitle;
-    color: var(--text-color);
-    border: 1px solid #000;
-    grid-row: 2;
-    grid-column: 1;
-}
-
-.download-buttons{
-    display: block;
-    grid-area: download-buttons;
-    border: 1px solid #000;
-    grid-row: 3;
-    grid-column: 1;
-}
-
-.mobiles{
-    display: grid;
-    grid-area: mobiles;
-    border: 1px solid #000;
-    grid-row: 1 / span 3; /* Spänner över tre rader 
-    grid-column: 2;
-}*/
-
-
-h1{
-    margin: 0;
-    font-size: 34px;
-    color: var(--gray-900);
-}
-
-#subtitle{
-    margin: 0;
-}
-
-/*#title{
-    width: 526px;
-    margin-left: 320px;
-    margin-right: 312px;
-}
-
-#subtitle{
-    font-size: 16px;
-    color: var(--text-color);
-    margin-left: 320px;
-    margin-right: 312px;
-}
-
-.download-buttons{
-    margin-left: 320px;
-    margin-right: 312px;
-    flex: grid;
-
-}*/
-
-footer{
-    background-color: var(--background-color);
-    color: var(--gray-600);
-    text-align: center;
-    align-content: center;
-    height: 130px; 
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 320px;
-    margin-right: 312px;
-}
-
 .nav-container{
     display: flex;
     gap: 10px;
@@ -248,4 +104,85 @@ footer{
     border-radius: 8px;
     height: 100px;
     align-content: center;
+}
+
+#hero{
+    background: var(--gradient-background-color);
+    background: var(--gradient-background);
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+    height: 688px;
+}
+
+.hero-container-left{
+    display: grid;
+    padding-top: 48px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:    "b1 b1"
+                            "b2 b2"
+                            "b3 b3"
+    ;
+
+    #b1{
+        grid-area: b1;
+
+    #title{
+        margin: 0;
+        width: 526px;
+        padding-top: 48px;
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--gray-900); 
+        }
+    }
+
+
+
+    #b2{
+        grid-area: b2;
+
+        #subtitle{
+        margin: 0;
+        padding-top: 24px;
+        font-size: 1.125rem;
+        color: var(--gray-700);
+        width: 450px;
+    }
+    }
+
+    #b3{
+        display: flex;
+        grid-area: b3;
+        align-items: flex-start;
+
+        .download-buttons{
+        display: block;
+        padding-right: 24px;
+        padding-top: 24px;
+        width: 180px;
+    }
+    }
+    
+}
+
+.hero-container-right{
+    align-items:end;
+}
+
+
+footer{
+    background-color: var(--background-color);
+    color: var(--gray-600);
+    text-align: center;
+    align-content: center;
+    height: 130px; 
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 320px;
+    margin-right: 312px;
 }
