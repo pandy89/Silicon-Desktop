@@ -331,9 +331,6 @@ header{
                 margin-bottom: 5rem;
             }
         }
-        .hero-image{
-
-        }
     } 
 }
 
@@ -363,9 +360,6 @@ header{
     display: flex;
     justify-content: space-between;
     margin-top: 112px;
-    .feature-image{
-
-}
 
     .feature-content{
         margin-left: 200px;
