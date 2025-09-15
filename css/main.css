@@ -172,6 +172,85 @@ html, body{
     align-content: center;
 }
 
+#feature{
+    margin-left: 320px;
+    margin-right: 312px;
+    margin-top: 112px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#card1{   
+    
+    h2{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;   
+    width: 746px; 
+    
+    }
+    #text2{
+    margin: 0;
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    font-weight: 400;
+    width: 750px;
+    padding-bottom: 67px;
+    padding-top: 13px;
+    }
+}
+
+.card-container{
+    display: grid;
+
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 56px;
+}
+
+.card{
+    display: grid;
+    width: 345px;
+
+    grid-template-columns: 1fr auto;
+    grid-template-areas:    "c1 c2"
+                            "c1 c3"    
+    ;
+
+    .c1{ 
+        grid-area: c1;
+        margin-right: 24px;
+    }   
+    .c2{ 
+        grid-area: c2;
+    }
+    .c3{ 
+        grid-area: c3;
+    }
+}
+
+.iconbox{
+    text-align: center; 
+    align-content: center; 
+    border-radius: 8px;
+    background-color: rgba(99, 102, 241, 0.08);
+    height: 60px; width: 60px; 
+}
+
+h5{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gray-900)
+}
+
+.card-description{
+    margin:0;
+    color: var(--gray-700);
+}
+
+
 footer{
     background-color: var(--background-color);
     color: var(--gray-600);
