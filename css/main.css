@@ -3,12 +3,6 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
-html, body{
-    width: 1920px;
-    margin: 0 auto;
-    scroll-behavior: smooth;
-    font-family: "Manrope", sans-serif;
-}
 
 :root{
     --background-color: #ffffff;
@@ -32,32 +26,33 @@ html, body{
     --gradient-background-color: #6366F1;
     --gradient-background: linear-gradient(0deg,rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.1) 50%, rgba(241, 244, 253, 0.1) 100%);
 
+    --color-button-text: var(--white);
+    --color-button-background: var(--primary-color);
+    --color-button-background-hover: var(--gray-600);
+
+}
+
+html, body{
+    font-size: 1rem;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--white);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+button{
+    color: var(--color-button-text);
+    background-color: var(--color-button-background);
 }
 
 /*Fonts*/
-
-.dispaly4{
-    margin: 0;
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 130%;
-    color: var(--gray-900);
-}
 
 .bodys{
     margin: 0;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 160%;
-    color: var(--gray-600)
-}
-
-.bodys-1{
-    margin: 0;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 160%;
-    color: var(--gray-700)
+    color: var(--gray-700);
 }
 
 .bodym{
@@ -65,18 +60,10 @@ html, body{
     font-size: 1rem;
     font-weight: 400;
     line-height: 160%;
-    color: var(--gray-700)
+    color: var(--gray-700);
 }
 
 .bodyl{
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 160%;
-    color: var(--gray-600);
-}
-
-.bodyl-2{
     margin: 0;
     font-size: 1.125rem;
     font-weight: 400;
@@ -86,13 +73,21 @@ html, body{
 
 .h1{
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 130%;
     color: var(--gray-900);
 }
 
 .h2{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: var(--gray-900);
+}
+
+.h3{
     margin: 0;
     font-size: 2rem;
     font-weight: 900;
@@ -140,7 +135,7 @@ html, body{
     color: var(--system-success);
 }
 
-.reviewname{
+.review-name{
     margin: 0;
     font-size: 1rem;
     font-weight: 700;
@@ -148,7 +143,7 @@ html, body{
     color: var(--gray-900);
 }
 
-.navigationAccordion{
+.navigation-accordion{
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
@@ -162,12 +157,161 @@ html, body{
 
 }*/
 
-.page{
-    height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+.container{
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
 }
 
+.btn-signin-text{
+    display: none;
+
+    @media (width >= 768px){
+        display: flex;
+    }
+}
+
+.btn{
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--gradient-background-color);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 12px 24px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.10s ease-in-out;
+
+    &:hover{
+        background-color: var(--color-button-background-hover);
+    }
+}
+
+.app-download-buttons{
+
+}
+
+.btn-download{
+    text-decoration: none;
+    display: inline-block;
+
+    .btn-area{
+        display: grid;
+        column-gap: 1rem;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:    "icon text"
+                                "icon store";
+
+        background-color: var(--gray-900);
+        color: var(--white);
+        font-size: 1rem;
+        border-radius: 4px;
+        padding: 10px 20px;
+
+        .download-app-text{
+            grid-area: text;
+            font-size: 0.9m;
+            font-weight: 400;
+        }
+
+        .download-app-icon{
+            grid-area: icon;
+        }
+
+        .download-app-store{
+            grid-area: store;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+    }
+}
+
+header{
+
+    .logotyp{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .logotyp-text{
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 130%;
+            color: var(--gray-900);
+        }
+    }
+
+    .header-area{
+        display: flex;
+        justify-content: space-between;
+
+        @media (width >= 768px){
+            display: flex;
+            justify-content: space-between;
+        } 
+    }
+
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+#hero{
+    background: var(--gradient-background-color);
+    background: var(--gradient-background);
+    margin-top: 100px;
+
+    .hero-area{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+
+        @media (width >= 768px){
+            grid-template-columns: 1fr 1fr;
+            text-align: start;
+            gap: 1rem;
+
+        }
+    }
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; 
+    }
+
+    .hero-image{
+
+    }
+}
+
+
+
+
+
+
+
+
+/*
 #header{
     margin: 0 312px 0 312px;
 }
@@ -206,10 +350,7 @@ html, body{
     font-size: 18px;
 }
 
-#hero{
-    background: var(--gradient-background-color);
-    background: var(--gradient-background);
-}
+
 
 #container{
     display: flex;
@@ -264,7 +405,7 @@ html, body{
 .hero-container-right{
     align-items:end;
 }
-
+*/
 #brand{
     margin: 96px 312px 0 320px;
 }
@@ -292,7 +433,7 @@ html, body{
 
 #card1{   
     
-    h2{
+    h2-1{
         margin: 0;
         font-size: 2.5rem;
         font-weight: 800;   
@@ -340,21 +481,15 @@ html, body{
     }
 }
 
-.iconbox{
+.icon-box{
     text-align: center; 
     align-content: center; 
     border-radius: 8px;
     background-color: rgba(99, 102, 241, 0.08);
-    height: 60px; width: 60px; 
+    height: 60px; 
+    width: 60px; 
+    padding-top: 3px;
 }
-
-/*
-h5{
-    margin: 0;
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--gray-900)
-}*/
 
 .card-description{
     margin:0;
@@ -397,10 +532,83 @@ h5{
     }
 }
 
-.bodym{
+
+ul{
     margin: 0;
-    font-size: 16px;
-    color: var(--gray-700);
+    padding: 3px;
+    list-style: none;
+    
+}
+
+.list-icon{
+    color: var(--primary-color);
+    padding-right: 8px;
+
+}
+.list-item{
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+
+.appfeatures-area-1{
+    display: flex;
+    align-items: center;
+    margin-top: 112px;
+
+    .content-1{
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+        margin: 0 134px 0 110px;
+    }
+}
+.appfeatures-area-2{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 112px;
+
+    .content-1{
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+        margin: 0 134px 0 110px;
+    }
+}
+
+.appfeatures-content-header{
+    max-width: 526px;
+}
+
+
+
+
+.icon-box-text{
+
+    display: flex;
+    width: 243px;
+    margin: 12px 0 40px 0;
+    
+}
+
+
+
+.appfeatures-content-header-1{
+    padding-bottom: 32px;
+}
+
+.appfeatures-content-header-2{
+    padding-bottom: 32px;
+    width: 526px;
+}
+
+
+
+
+
+.checklist{
+    margin-bottom: 40px;
 }
 
 footer{
