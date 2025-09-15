@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+ 
+:root{
+    --background-color: #ffffff;
+    --text-color: #565973;
+    --primary-color: #6366f1;
+    --system-error: #EF4444;
+    --system-success: #22c55e;
+    --system-warning: #ffba08;
+    --system-info: #4c82f7;
+    --white: #fff;
+    --gray-100: #f3f6ff;
+    --gray-200: #eff2fc;
+    --gray-300: #e2e5f1;
+    --gray-400: #d4d7e5;
+    --gray-500: #b4b7c9;
+    --gray-600: #9397ad;
+    --gray-700: #565973;
+    --gray-800: #33354d;
+    --gray-900: #0b0f19;
+   
+    --gradient-background-color: #ffff;
+    --gradient-background: linear-gradient(180deg,rgba(255, 255, 255, 0.07) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
+ 
+    --color-button-text: var(--white);
+    --color-button-background: var(--primary-color);
+    --color-button-background-hover: var(--gray-600);
+
+    --color-button-download-app-background: #0b0f19;
+    --color-button-download-app-hover-background: #33354d;
+    --color-button-download-app-text: #ffffff;
+ 
+}
+ 
+html, body{
+    font-size: 1rem;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--white);
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+ 
+button{
+    color: var(--color-button-text);
+    background-color: var(--color-button-background);
+}
+
+.btn{
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 12px 24px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.10s ease-in-out;
+    cursor: pointer;
+ 
+    &:hover{
+        background-color: var(--color-button-background-hover);
+    }
+
+    .img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+/* Download app buttons */
+ 
+.btn-download{        
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+    cursor: pointer;
+    
+    .btn-area{
+        padding: 10px 20px;
+        display: grid;
+        column-gap: 1rem;
+        align-items: center;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:    "icon text" 
+                                "icon store";
+
+        font-size: 1.2rem;
+
+        background-color: var(--color-button-download-app-background);
+        color: var(--color-button-download-app-text);
+        border-radius: 10px;
+        
+        .download-app-text{
+            grid-area: text;
+            font-size: 0.6em;
+            font-weight: 600;
+            text-align: left;
+        }
+    
+        .download-app-icon{
+            grid-area: icon;
+            height: auto;
+            width: auto;
+        }
+    
+        .download-app-store{
+            grid-area: store;
+            font-size: 0.8em;
+            font-weight: 700;
+            text-align: left;
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+ 
+/*Fonts*/
+ 
+.bodys{
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--gray-700);
+}
+ 
+.bodym{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--gray-700);
+}
+ 
+.bodyl{
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--gray-700);
+}
+ 
+.h1{
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: var(--gray-900);
+}
+ 
+.h2{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: var(--gray-900);
+}
+ 
+.h3{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 130%;
+    color: var(--gray-900);
+}
+ 
+.h4{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 140%;
+    color: var(--gray-900);
+}
+ 
+.h5{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 140%;
+    color: var(--gray-900);
+}
+ 
+.buttontext-white{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--white);
+}
+ 
+.buttontext-primary{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--primary-color);
+}
+ 
+.buttontext-success{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--system-success);
+}
+ 
+.review-name{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 160%;
+    color: var(--gray-900);
+}
+ 
+.navigation-accordion{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--gray-900);
+}
+
+/* Fonts end */
+
+.container{
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Header start */
+header{
+ 
+    .logotyp{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+ 
+        .logotyp-text{
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 130%;
+            color: var(--gray-900);
+        }
+    }
+ 
+    .header-area{
+        display: flex;
+        justify-content: space-between;
+ 
+        @media (width >= 768px){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+ 
+    .actions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+ 
+    }
+}
+/* Header end */
+
+/* Hero start */
+.hero{
+    background: var(--gradient-background-color);
+    background: var(--gradient-background);
+    padding-top: 100px;
+ 
+    .hero-area{
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+
+        @media (width >= 768px){
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            
+            .hero-title{
+                margin: 0;
+                font-size: 3.5rem;
+                font-weight: 800;
+                line-height: 130%;
+                color: var(--gray-900);
+            }
+
+            .hero-ingress{
+                margin: 0;
+                margin-bottom: 48px;
+                font-size: 1.125rem;
+                font-weight: 400;
+                line-height: 160%;
+                color: var(--gray-700);
+            }
+
+            .app-download-buttons{
+                display: grid;
+                grid-template-columns: 180px 180px;
+                gap:1rem;
+
+                margin-bottom: 5rem;
+            }
+        }
+        .hero-image{
+
+        }
+    } 
+}
+
+/* Hero end */
+
+/* Brand start */ 
+.brand-area{
+    display: flex;
+    text-align: center;
+    gap:24px;
+    margin-top: 48px;
+
+    .brand-box{
+    flex: 6;
+    border:1px solid;
+    border-color: var(--gray-300);
+    border-radius: 8px;
+    height: 100px;
+    align-content: center;
+}
+}
+
+/* Brand end */ 
+
+/* App features start */ 
+.feature-area{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 112px;
+    .feature-image{
+
+}
+
+    .feature-content{
+        margin-left: 200px;
+    
+        .feature-headline{
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .feature-text{
+            margin: 0;
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            font-weight: 400;
+        }
+
+        .card-container{
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        grid-gap: 56px;
+        margin-top: 67px;
+
+            .card{
+                display: grid;
+                width: 345px;        
+                grid-template-columns: 1fr auto;
+                grid-template-areas:    "c1 c2"
+                                        "c1 c3";
+            
+                .c1{
+                    grid-area: c1;
+                    margin-right: 24px;
+                }  
+            
+                .c2{
+                    grid-area: c2;
+                }
+            
+                .c3{
+                    grid-area: c3;
+                }
+
+                .card-headline{
+                    margin: 0;
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    line-height: 140%;
+                    color: var(--gray-900);
+                }   
+
+                .card-description{
+                    margin: 0;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 160%;
+                    color: var(--gray-700);
+                }
+
+                .icon-box{
+                    text-align: center;
+                    align-content: center;
+                    border-radius: 8px;
+                    background-color: rgba(99, 102, 241, 0.08);
+                    height: 60px;
+                    width: 60px;
+                    padding-top: 3px;
+
+                    .img{
+                        height: 28px;
+                        width: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Feature end */
+
+/* How does it work start */
+
+#howdoesitwork{
+    background-color: var(--gray-100);
+    padding-bottom: 96px;
+    padding-top: 48px;
+}
+
+.hdiw-headline{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: var(--gray-900);
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.hdiw-images{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 40px 32px 40px;
+}
+
+.hdiw-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 350px 0 350px;
+
+    .h4{
+        margin: 0;
+        margin-bottom: 12px;
+        color: var(--gray-900);
+        font-size: 1.5rem;
+    }    
+}
+
+/* How does it work end */
+
+/* App Features start */
+
+.appfeatures-area-1{
+    display: flex;
+    align-items: center;
+    margin-top: 112px;
+}
+
+.appfeatures-area-1-content{
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.appfeatures-area-1-content-header{
+    padding-bottom: 32px;
+    width: 490px;
+} 
+    
+ul{
+    margin: 0;
+    padding: 3px;
+    list-style: none;
+}
+        
+.list-icon{
+    color: var(--primary-color);
+    padding-right: 8px;
+}
+
+.checklist{
+    margin-bottom: 40px;
+
+    .list-item{
+        margin: 0;
+        padding-bottom: 12px;
+    }
+}
+
+.appfeatures-area-2{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 112px;
+
+    .appfeatures-area-2-header{
+    max-width: 526px;
+    padding-bottom: 32px;
+    }
+
+    .appfeatures-area-2-info{
+    display: flex; 
+    justify-content: space-between;
+
+    }
+
+    .appfeatures-card{
+
+        .icon-box{          
+        text-align: center;
+        align-content: center;
+        border-radius: 8px;
+        background-color: rgba(99, 102, 241, 0.08);
+        height: 60px;
+        width: 60px;
+        padding-top: 3px;
+
+            .img{
+            height: 28px;
+            width: 28px;
+            }
+        }
+
+        .icon-box-text{
+            display: flex;
+            width: 243px;
+            margin: 12px 0 40px 0;
+        }
+    }
+}
+
+/* Footer start */
+
+footer{
+    background-color: var(--background-color);
+    color: var(--gray-600);
+    text-align: center;
+    align-content: center;
+    height: 130px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 321px 0 320px;
+}
+
+/* Footer end */
