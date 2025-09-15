@@ -12,7 +12,7 @@ html, body{
 
 :root{
     --background-color: #ffffff;
-    --text-color: var(--gray-700);
+    --text-color: #565973;
     --primary-color: #6366f1;
     --system-error: #EF4444;
     --system-success: #22c55e;
@@ -28,7 +28,9 @@ html, body{
     --gray-700: #565973;
     --gray-800: #33354d;
     --gray-900: #0b0f19;
-    --gradient: linear-gradient(90deg,rgba(99, 102, 241, 1) 100%, rgba(139, 92, 246, 1) 100%, rgba(217, 70, 239, 1) 100%);
+    
+    --gradient-background-color: #6366F1;
+    --gradient-background: linear-gradient(0deg,rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.1) 50%, rgba(241, 244, 253, 0.1) 100%);
 
 }
 
@@ -40,30 +42,11 @@ html, body{
 
 .page{
     height: 100dvh;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
 #header{
-    margin-left: 320px;
-    margin-right: 312px;
-}
-
-main{
-
-    margin-left: 320px;
-    margin-right: 312px;
-}
-
-footer{
-    background-color: var(--background-color);
-    color: var(--gray-600);
-    text-align: center;
-    align-content: center;
-    height: 130px; 
-    font-size: 14px;
-    font-weight: 400;
     margin-left: 320px;
     margin-right: 312px;
 }
@@ -121,4 +104,85 @@ footer{
     border-radius: 8px;
     height: 100px;
     align-content: center;
+}
+
+#hero{
+    background: var(--gradient-background-color);
+    background: var(--gradient-background);
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+    height: 688px;
+}
+
+.hero-container-left{
+    display: grid;
+    padding-top: 48px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:    "b1 b1"
+                            "b2 b2"
+                            "b3 b3"
+    ;
+
+    #b1{
+        grid-area: b1;
+
+    #title{
+        margin: 0;
+        width: 526px;
+        padding-top: 48px;
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--gray-900); 
+        }
+    }
+
+
+
+    #b2{
+        grid-area: b2;
+
+        #subtitle{
+        margin: 0;
+        padding-top: 24px;
+        font-size: 1.125rem;
+        color: var(--gray-700);
+        width: 450px;
+    }
+    }
+
+    #b3{
+        display: flex;
+        grid-area: b3;
+        align-items: flex-start;
+
+        .download-buttons{
+        display: block;
+        padding-right: 24px;
+        padding-top: 24px;
+        width: 180px;
+    }
+    }
+    
+}
+
+.hero-container-right{
+    align-items:end;
+}
+
+
+footer{
+    background-color: var(--background-color);
+    color: var(--gray-600);
+    text-align: center;
+    align-content: center;
+    height: 130px; 
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 320px;
+    margin-right: 312px;
 }
