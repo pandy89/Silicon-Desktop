@@ -109,6 +109,34 @@ button{
     }
 }
 
+.btn-subscribe{
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 13px 32px;
+    height: 52px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.10s ease-in-out;
+    cursor: pointer;
+ 
+    &:hover{
+        background-color: var(--color-button-background-hover);
+    }
+
+    .img{
+        height: 100%;
+        width: auto;
+    }
+}
+
 /* Download app buttons */
  
 .btn-download{        
@@ -742,61 +770,61 @@ ul{
 }
 
 .btn-phone{
-        display: flex;
-        gap: 0.5rem;
-        background-color: var(--color-button-secondary-background);
-        font-family: "Manrope", sans-serif;
-        font-size: 0.875rem;
-        font-weight: 600;
-        height: 40px;
-        width: auto;
-        border: none;
-        color: var(--color-button-secondary-text);
-        text-align: start;
-        align-items: center;
-        justify-content: center;
-        padding: 11px 0 11px 0;
-        text-decoration: none;
-        transition: background 0.10s ease-in-out;
-        cursor: pointer;
-    
-        &:hover{
-            text-decoration: underline;
-        }
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-button-secondary-background);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 40px;
+    width: auto;
+    border: none;
+    color: var(--color-button-secondary-text);
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 0 11px 0;
+    text-decoration: none;
+    transition: background 0.10s ease-in-out;
+    cursor: pointer;
 
-        .img{
-            height: 100%;
-            width: auto;
-        }
+    &:hover{
+        text-decoration: underline;
+    }
+
+    .img{
+        height: 100%;
+        width: auto;
+    }
 }
 
 .btn-chat{
-        display: flex;
-        gap: 0.5rem;
-        background-color: var(--color-button-secondary-background);
-        font-family: "Manrope", sans-serif;
-        font-size: 0.875rem;
-        font-weight: 600;
-        height: 40px;
-        width: auto;
-        border: none;
-        color: var(--system-success);
-        text-align: start;
-        align-items: center;
-        justify-content: center;
-        padding: 11px 0 11px 0;
-        text-decoration: none;
-        transition: background 0.10s ease-in-out;
-        cursor: pointer;
-    
-        &:hover{
-            text-decoration: underline;
-        }
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--color-button-secondary-background);
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 40px;
+    width: auto;
+    border: none;
+    color: var(--system-success);
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 0 11px 0;
+    text-decoration: none;
+    transition: background 0.10s ease-in-out;
+    cursor: pointer;
 
-        .img{
-            height: 100%;
-            width: auto;
-        }
+    &:hover{
+        text-decoration: underline;
+    }
+
+    .img{
+        height: 100%;
+        width: auto;
+    }
 }
 
 
@@ -884,18 +912,64 @@ ul{
 }
 
 .active .chevron {
-     background-color: var(--primary-color);
+    background-color: var(--primary-color);
     width: 36px;
     height: 36px;
     border-radius: 100%;
     padding: 8px;
     text-align: center;
     justify-content: center;
-  transform: rotate(180deg);
-  color: var(--white); /* Färg när aktiv */
+    transform: rotate(180deg);
+    color: var(--white);
 }
 
 /* FAQ end */
+
+/* Subcribe start */
+.subscribe-area{
+    background-color: var(--gray-100);
+    border-radius: 8px;
+    padding: 72px;
+    padding-left: 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 112px;
+}
+
+.subscribe-content{
+    display: flex;
+    gap: 32px;
+    width: 526px;
+}
+
+.subscribe-form{
+    padding-right: 80px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+}
+
+.input-field {
+    width: 330px;
+    background-image: url('../assets/images/envelope-icon.svg');
+    background-position: 13px 15px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 3px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--gray-400);
+}
+
+input::placeholder{
+    color: var(--gray-500);
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+}
+
+/* Subscribe end */
 
 /* Footer start */
 
