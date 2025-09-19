@@ -538,7 +538,6 @@ input[type="checkbox"]:checked + .slider{
 
 /* Hero start */
 .hero{
-    background: var(--gradient-background-color);
     background: var(--gradient-background);
     padding-top: 100px;
  
