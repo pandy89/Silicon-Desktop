@@ -32,7 +32,7 @@
     --gray-900: hsla(222, 39%, 8%, 1);
 
 
-    --color-button-text: var(--white);
+    --color-button-text: hsla(0, 0%, 100%, 1);
     --color-button-background: var(--primary-color);
     --color-button-background-hover: var(--button-hover-color);
 
@@ -41,12 +41,12 @@
     --button-hover-color: hsl(239, 83%, 80%, 1);
 
    
-    --gradient-background-color: var(--white);
+    --gradient-background-color: hsla(0, 0%, 100%, 1);
     --gradient-background: linear-gradient(180deg,rgba(255, 255, 255, 0.07) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
     
     --color-button-download-app-background: hsl(223, 39%, 7%, 1);
     --color-button-download-app-hover-background: hsl(235, 20%, 25%, 1);
-    --color-button-download-app-text: var(--white);
+    --color-button-download-app-text: hsla(0, 0%, 100%, 1);
 
     --testimonials-card-color: hsla(0, 0%, 100%, 1);
 
@@ -98,14 +98,14 @@
 
 
     --color-button-download-app-background: var(--gray-200);
-    --color-button-download-app-hover-background: hsl(235, 20%, 25%, 1);
-    --color-button-download-app-text: var(--gray-900);
+    --color-button-download-app-hover-background: hsla(235, 20%, 25%, 1);
+    --color-button-download-app-text: hsla(226, 100%, 97%,);
 
     --testimonials-card-color: hsla(0, 0%, 100%, 0.04);
 
     --accordion-background-color: hsla(0, 0%, 100%, 0.04);
 
-    --input-field-color: ;
+    --input-field-color: hsla(0, 0%, 100%, 0.04);
     }
 }
     
@@ -145,8 +145,8 @@ color-scheme: dark;
     --button-hover-color: hsl(239, 83%, 80%, 1);
 
     --color-button-download-app-background: var(--gray-200);
-    --color-button-download-app-hover-background: hsl(235, 20%, 25%, 1);
-    --color-button-download-app-text: var(--gray-900);
+    --color-button-download-app-hover-background: hsla(235, 20%, 25%, 1);
+    --color-button-download-app-text: hsla(222, 39%, 8%, 1);;
 
     --testimonials-card-color: hsla(0, 0%, 100%, 0.04);
 
@@ -286,6 +286,7 @@ button{
             font-size: 0.6em;
             font-weight: 600;
             text-align: left;
+            color: var(--color-button-download-app-text);
         }
     
         .download-app-icon{
@@ -299,6 +300,7 @@ button{
             font-size: 0.8em;
             font-weight: 700;
             text-align: left;
+            color: var(--color-button-download-app-text);
         }
     }
 }
@@ -612,6 +614,7 @@ input[type="checkbox"]:checked + .slider{
     display: flex;
     justify-content: space-between;
     margin-top: 112px;
+    margin-bottom: 112px;
 
     .feature-content{
         margin-left: 200px;
