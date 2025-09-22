@@ -578,13 +578,18 @@ input[type="checkbox"]:checked + .slider{
 
             .app-download-buttons{
                 display: grid;
-                grid-template-columns: 180px 180px;
+                grid-template-columns: 190px 190px;
                 gap:1rem;
 
                 margin-bottom: 5rem;
             }
         }
     } 
+}
+
+.bi bi-apple{
+    width: 24px;
+    height: 24px;
 }
 
 /* Hero end */
